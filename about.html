@@ -1,0 +1,615 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Goods Way</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+    
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+  </head>
+  <body>
+<!-- header -->
+<header id="site-header" class="fixed-top">
+  <main class="main" id="top">
+    <nav class="navbar navbar-light sticky-kit navbar-expand-lg" style="background-color: rgb(14, 1, 1);">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logos/Normal.png" alt="logo" class="logo-img" width="70" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle navigation">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" width="30" height="2" fill="white"></rect>
+            <rect x="3" y="9" width="30" height="2" fill="white"></rect>
+            <rect x="3" y="18" width="30" height="2" fill="white"></rect>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse custom-collapse" id="navbarStandard">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="features.html">Features</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="utilitiesNavbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog-grid.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="ml-auto button-group">
+            <a class="btn btn-sm" 
+               style="transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; 
+                      color: #ffffff; 
+                      background-color: #2f324c; 
+                      padding: 12px 0; 
+                      width: 120px; 
+                      font-size: 0.8rem; 
+                      text-align: center; 
+                      border-radius: 8px; 
+                      margin-right: 10px;" 
+               onmouseover="this.style.boxShadow='0 0 10px rgba(255, 0, 255, 0.7)'; this.style.color='#ff00ff';" 
+               onmouseout="this.style.boxShadow='none'; this.style.color='#ffffff';" 
+               href="#!">Download</a>
+            
+            <a class="btn btn-sm" 
+               style="transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; 
+                      color: #ffffff; 
+                      background-color: #5945fe; 
+                      padding: 12px 0; 
+                      width: 120px; 
+                      font-size: 0.8rem; 
+                      text-align: center; 
+                      border-radius: 8px;"
+               onmouseover="this.style.boxShadow='0 0 10px rgba(0, 255, 255, 0.7)'; this.style.color='#00ffff';" 
+               onmouseout="this.style.boxShadow='none'; this.style.color='#ffffff';" 
+               href="#!">Register</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+  
+  <style>
+    .navbar {
+    margin-bottom: -20px; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+    @media (max-width: 767.98px) { /* Adjust breakpoint as necessary */
+    body {
+        margin: 0; /* Remove default body margin */
+    }
+
+    .navbar {
+        padding-top: 0; /* Remove top padding from navbar */
+        margin-top: -20px; /* Ensure there's no margin above */
+    }
+
+    .custom-collapse {
+        margin-top: 0; /* Optional: If there's any margin on collapse */
+    }
+
+    section {
+        margin-top: 0; /* Remove margin from section if applicable */
+        padding-top: 0; /* Remove padding from section if necessary */
+    }
+}
+
+    /* Move logo down on larger screens */
+@media (min-width: 992px) { /* Adjust this breakpoint as needed */
+    .logo-img {
+        margin-top: 40px; /* Adjust this value to move the logo down */
+        margin-left: 4opx;
+    }
+}
+/* Move logo up on smaller screens */
+@media (max-width: 767.98px) { /* Adjust this breakpoint as needed */
+    .logo-img {
+        margin-top: 20px; /* Adjust this value to move the logo up */
+        margin-left: -2px;
+        height: auto;
+        width: 60px !important;
+    }
+}
+
+
+  /* General Navbar Styles */
+  .navbar-light .navbar-nav .nav-link {
+      color: #f8f4f4; /* Link color */
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+      color: #00ff00; /* Hover color */
+      text-decoration: none; /* Remove underline on hover */
+  }
+  
+  /* Hamburger Menu Position on Mobile */
+  .navbar-toggler {
+      position: relative;
+      left: -40px; /* Adjust as needed */
+   
+      
+  }
+  /* Custom Hamburger Menu Styles */
+/* Custom Hamburger Menu Styles */
+.navbar-toggler {
+    border: none ; /* Remove border */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-color: green !important; /* Ensure background is transparent */
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after,
+.navbar-toggler .navbar-toggler-icon span {
+    background-color: rgb(228, 35, 35) !important; /* Set hamburger lines to white */
+}
+
+.navbar-toggler span {
+    background-color: rgb(212, 23, 23) !important; /* Ensure the center line is also white */
+}
+
+/* Ensure no other styles are affecting it */
+.navbar-toggler:focus {
+    outline: none !important; /* Remove focus outline */
+}
+
+  
+  /* Responsive Adjustments */
+  @media (max-width: 767.98px) {
+      .navbar .container {
+          max-width: 90%;
+          padding: 10px;
+          margin-top: -10px;
+          margin-bottom: -1px;
+      }
+      .logo-img{
+        height: auto;
+        width: 800px;
+      }
+      .navbar-brand .logo-img {
+          width: 60px; /* Smaller logo size for mobile */
+      }
+
+      .navbar {
+          padding-left: 0;
+          padding-right: 0;
+      }
+  
+      .custom-collapse {
+          min-height: 320px; /* Increase height of collapsed menu */
+      }
+  
+      /* Center-align buttons and display them on the same horizontal level */
+      .button-group {
+          display: flex;
+          justify-content: center;
+          margin-top: 240px;
+          gap: 10px; /* Adjust spacing between buttons as needed */
+      }
+  
+      .button-group a {
+          width: auto; /* Keep buttons at natural width */
+      }
+  }
+  
+  @media (max-width: 576px) {
+      .navbar-brand .logo-img {
+          width: 80px; /* Even smaller logo size on extra small screens */
+      }
+  }
+  </style>
+  
+    
+    <section class="bg-dark py-xxl-11 py-xl-8 py-lg-6 py-0">
+      <div class="bg-holder" style="background-image:url(assets/img/bg-img/home-header.png);">
+      </div>
+    </section>
+  </main>
+</header>
+<!-- //header -->
+<section class="w3l-breadcrumb  ">
+   
+</section>
+<section class="w3l-features py-5" id="features">
+    <div class="call-w3 py-lg-5 py-md-4">
+        <div class="container">
+            <div class="row main-cont-wthree-2">
+                <div class="col-lg-6 feature-grid-left">
+                    <h3 class="title-big mb-4">Discover Goods Way : Innovating Transportation Solutions</h3>
+                    <p class="text-para">RM Steels, established in 2020, is a prominent player in South India’s steel industry. Headquartered in Kerala, we deliver quality products, including iron scrap, MS billets, ingots, and TMT bars, across six states: Maharashtra, Andhra Pradesh, Karnataka, Goa, Tamil Nadu, and Kerala. Our commitment to integrity, quality, and strong partnerships has led to an expanded network with a robust logistics division, ensuring reliable and efficient distribution.
+
+                    </p>
+                    <ol class="w3l-right mt-4 mb-0">
+                        <li> In 2024, RM Steels introduced GoodsWay, a mobile application that revolutionizes logistics in India by digitizing and enhancing the industry.</li>
+                        <li>GoodsWay brings a new level of connectivity to logistics by enabling fleet owners, transporters, and drivers to operate in an integrated digital environment.</li>
+                        <li>GoodsWay facilitates seamless communication and collaboration among fleet owners, transporters, drivers, and businesses, creating an integrated digital platform that streamlines logistics processes.</li>
+                       
+                    </ol>
+                    <div class="row mt-5">
+                        <div class="col-4 col-lg-3">
+                            <div class="count-data text-center">
+                                <h4 class="count-number font-weight-bold">24/7</h4>
+                                <span>Support</span>
+                            </div>
+                        </div>
+                        <div class="col-4 col-lg-3">
+                            <div class="count-data text-center">
+                                <h4 class="count-number font-weight-bold">30+</h4>
+                                <span>Services</span>
+                            </div>
+                        </div>
+                        <div class="col-4 col-lg-3">
+                            <div class="count-data text-center">
+                                <h4 class="count-number font-weight-bold">97%</h4>
+                                <span>Satisfied</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 feature-grid-right mt-lg-0 mt-5">
+                    <img src="assets/images/about.png" alt="" class="img-fluid">
+                </div>
+                <style>
+                  @media (min-width: 992px) { /* This media query targets large screens */
+    .feature-grid-right img {
+        margin-top: 120px; /* Adjust the value to your liking */
+    }
+}
+
+                </style>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="w3l-features1 py-5" id="features">
+  <div class="call-w3 py-lg-5 py-md-4">
+      <div class="container">
+          <div class="row main-cont-wthree-2">
+              <div class="col-lg-6 feature-grid-left">
+                  <h3 class="title-big mb-4">Our Mission</h3>
+                  <p class="text-para">
+                    At RM Steels and GoodsWay, our mission is to drive efficiency, reliability, and growth in logistics, catalyzing India’s economic transformation. Through innovative technology and exceptional customer satisfaction, we redefine logistics, supporting businesses, job seekers, and the supply chain in an ever-evolving global environment. Collaboratively, we shape India’s logistics future. </p>
+                  <ol class="w3l-right mt-4 mb-0">
+                      <li>GoodsWay is a digital marketplace that empowers the entire logistics value chain.</li>
+                      <li>It unites transporters, fleet operators, and drivers in one easy-to-use interface.</li>
+                      <li>It offers a secure, user-friendly experience accessible to everyone, from individual drivers to large logistics firms.</li>
+                      
+                  </ol>
+                  <a href="#download" class="btn btn-primary btn-style mt-md-5 mt-4 mr-2">Get started</a>
+                  <a href="#download" class="btn btn-outline-primary btn-style mt-md-5 mt-4">Contact Us</a>
+              </div>
+              <div class="col-lg-6 feature-grid-right mb-lg-0 mb-5 img-container">
+                  <img src="assets/images/makeinindia.png" alt="Make in India Campaign Logo" class="img-fluid">
+              </div>
+          </div>
+      </div>
+  </div>
+  <style>@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .main-cont-wthree-2 {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        margin-bottom: -120px;
+    }
+
+    .feature-grid-right {
+        order: 1; /* Position the image after the text */
+    }
+
+    .feature-grid-left {
+        order: 0; /* Keep the text before the image */
+    }
+}
+</style>
+</section>
+
+
+<section class="w3l-specification-6 py-5">
+    <!-- /specification-6-->
+    <div class="specification-6-mian py-lg-5 py-md-4">
+        <div class="container">
+            <h5 class="title-small text-center">Easy steps</h5>
+            <h3 class="title-big mb-5 text-center">We have some Easy steps</h3>
+            <div class="align-counter-6-inf-cols row">
+              <div class="counter-6-inf-left col-lg-6 d-flex justify-content-center align-items-center">
+                <img src="assets/images/steps.png" alt="Steps Image" class="img-fluid radius-image">
+              </div>
+              
+                <div class="counter-6-inf-right col-lg-6">
+                    <div class="specification">
+                        <div class="specification-icon">
+                            <span class="fa color-orange fa-cloud-download"></span>
+                        </div>
+                        <div class="specification-info">
+                            <h6><a href="blog-single.html">Download the app</a></h6>
+                            <p>Get started by downloading our app from the App Store or Google Play for seamless access.</p>
+                        </div>
+
+                    </div>
+                    <div class="specification">
+                        <div class="specification-icon">
+                            <span class="fa color-green fa-sign-in"></span>
+                        </div>
+                        <div class="specification-info">
+                            <h6><a href="blog-single.html">Login your account</a></h6>
+                            <p>Sign in using your credentials to access personalized features and manage your vehicle effortlessly.</p>
+                        </div>
+
+                    </div>
+                    <div class="specification">
+                        <div class="specification-icon">
+                            <span class="fa color-blue fa-gift"></span>
+                        </div>
+                        <div class="specification-info">
+                            <h6><a href="blog-single.html">Enjoy the App!</a></h6>
+                            <p>Explore the app’s features and enjoy a streamlined experience with all your transportation needs in one place.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<section class="w3l-download-main">
+		<!--/download-->
+		<div class="download-content text-center py-5">
+			<div class="container py-lg-4">
+				<h3 class="title-big">Exciting opportunity for transporters, drivers & owners <br> Register Now!</h3>
+				<h6>Click to register the form</h6>
+				<div class="banner-button">
+					<a href="form.html" class="btn btn-style btn-primary">Register Now</a>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--//download-->
+	</section>
+	<!--//w3l-download-main-->
+  
+  <!-- footer-28 block -->
+  <section class="app-footer">
+    <footer class="footer-28">
+      <div class="footer-bg-layer">
+        <div class="container py-lg-3">
+          <div class="row footer-top-28">
+            <div class="col-lg-4 footer-list-28 mt-5">
+              <h6 class="footer-title-28">Contact information</h6>
+              <p>
+                Reach us for seamless transportation solutions and expert customer support.
+                </p>
+
+              <div class="main-social-footer-28 mt-3">
+                <ul class="social-icons">
+                  <li class="facebook">
+                    <a href="https://www.facebook.com/GOODSWAYINDIA?mibextid=ZbWKwL" title="Facebook">
+                      <span class="fa fa-facebook" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li class="twitter">
+                    <a href="https://www.instagram.com/goodswayindia/profilecard/" title="Twitter">
+                      <span class="fa fa-instagram" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li class="dribbble">
+                    <a href="https://www.youtube.com/@goodsway-t9i" title="Dribbble">
+                      <span class="fa fa-youtube" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li class="google">
+                    <a href="https://www.linkedin.com/in/goodsway-india-654132336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Google">
+                      <span class="fa fa-linkedin" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-md-4 col-6 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Useful links</h6>
+                  <ul>
+                    <li><a href="features.html">App Features</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="blog-grid.html">Blog posts</a></li>
+                    <li><a href="form.html">Register</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 col-6 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Product help</h6>
+                  <ul>
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="terms.html">Terms & conditions</a></li>
+               
+                  </ul>
+                </div>
+                <div class="col-md-4 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Download</h6>
+                  <a href="#playstore"><img src="assets/images/googleplay.png" class="img-fluid" alt=""></a>
+                  <a href="#appstore"><img src="assets/images/appstore.png" class="img-fluid mt-md-2" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="midd-footer-28 align-center py-4 mt-5">
+            <p class="copy-footer-28 text-center"> &copy; 2024 RM Steels (GoodsWay). All Rights Reserved. </p>
+          </div>
+        </div>
+
+
+      </div>
+    </footer>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //footer-28 block -->
+
+  <!-- all js scripts and files here -->
+
+  <script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
+
+<!-- magnific popup -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.popup-with-move-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-slide-bottom'
+    });
+  });
+</script>
+<!-- magnific popup -->
+
+
+<script src="assets/js/owl.carousel.js"></script>
+<!-- script for tesimonials carousel slider -->
+<script>
+  $(document).ready(function () {
+    $("#owl-demo1").owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 2,
+          nav: false
+        },
+        736: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 4,
+          nav: false,
+          loop: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+  <!-- stats number counter-->
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/jquery.countup.js"></script>
+  <script>
+    $('.counter').countUp();
+  </script>
+  <!-- //stats number counter -->
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+
+  </html>
