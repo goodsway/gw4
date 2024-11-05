@@ -73,22 +73,22 @@ function handleRoleChange() {
                 <span class="details">Business Type</span>
                 <select name="Business Type" required>
                     <option value="">Select Business Type</option>
-                    <option value="Type1">Petrol Pump</option>
-                    <option value="Type2">Tyre Shop</option>
-                    <option value="Type3">Water service station </option>
+                    <option value="Petrol Pump">Petrol Pump</option>
+                    <option value="Tyre Shop">Tyre Shop</option>
+                    <option value="Water Service">Water service station </option>
 
                 
-                    <option value="Type4">Workshop</option>
-                    <option value="Type5">Weigh bridge</option>
-                    <option value="Type6">Authorized Service center</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Weigh Bridge">Weigh bridge</option>
+                    <option value="Authorized Service Center">Authorized Service center</option>
 
-                    <option value="Type7">Alignment shop</option>
-                    <option value="Type8">Recovery van</option>
-                    <option value="Type9">Mobile/puncture shop</option>
+                    <option value="Alignment Shop">Alignment shop</option>
+                    <option value="Recovery Van">Recovery van</option>
+                    <option value="Mobile/puncture shop">Mobile/puncture shop</option>
 
-                    <option value="Type10">Parking</option>
-                    <option value="Type11">Spare parts</option>
-                    <option value="Type12">Restaurants/Dhaba</option>
+                    <option value="Parking">Parking</option>
+                    <option value="Spare Parts">Spare parts</option>
+                    <option value="Restaurants/Dhabha">Restaurants/Dhaba</option>
 
 
                     <!-- Add more business types as needed -->
