@@ -1115,6 +1115,19 @@
                             <!-- DUNS Seal -->
                             <iframe id="IframeSeal" src="https://dunsregistered.dnb.com/SealAuthentication.aspx?Key1=3184632&PaArea=EMAIL" 
                                     width="114px" height="97px" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                      <style>
+     /* Adjust alignment for QR and DUNS Seal */
+.qr-duns-container {
+     margin-left: -20px; /* Move both elements left on larger screens */
+}
+
+    /* Reduce gap between QR code and DUNS Seal */
+ #qr-code {
+ margin-right: 5px; /* Reduced spacing between QR code and seal */
+margin-top: 0; /* Align vertically with the seal */
+}
+
+</style>    
                         </div>
                 </div>
             </div>
@@ -1170,17 +1183,7 @@
                         margin-top: 0.25rem;
                     }
 
-                    /* Adjust alignment for QR and DUNS Seal */
-                    .qr-duns-container {
-                        margin-left: -20px; /* Move both elements left on larger screens */
-                    }
-
-                    /* Reduce gap between QR code and DUNS Seal */
-                    #qr-code {
-                        margin-right: 5px; /* Reduced spacing between QR code and seal */
-                        margin-top: 0; /* Align vertically with the seal */
-                    }
-
+                 
                     /* Responsive adjustment */
                     @media (max-width: 992px) {
                         .qr-duns-container {
