@@ -1150,26 +1150,32 @@
               <a href="mailto:media@goodsway.co" class="text-decoration-none text-600">media@goodsway.co</a>
           </p>
        <div class="d-flex align-items-center mt-3">
-    <!-- QR Code -->
-    <div id="qr-code" class="mr-3">
-        <script language="JavaScript" src="https://dunsregistered.dnb.com/QRcode.js" type="text/javascript"></script>
-    </div>
-
-    <!-- DUNS Seal -->
-    <iframe id="IframeSeal" src="https://dunsregistered.dnb.com/SealAuthentication.aspx?Key1=3184632&PaArea=EMAIL" 
-            width="114px" height="97px" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+  <div id="qr-code" class="mr-3">
+    <script language="JavaScript" src="https://dunsregistered.dnb.com/QRcode.js" type="text/javascript"></script>
 </div>
 
+<!-- DUNS Seal -->
+<iframe id="IframeSeal" src="https://dunsregistered.dnb.com/SealAuthentication.aspx?Key1=3184632&PaArea=EMAIL" 
+        width="114px" height="97px" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+
 <style>
-    /* Add some custom styles for alignment */
+    /* Align QR code and DUNS seal */
     #qr-code, #IframeSeal {
         display: inline-block;
         vertical-align: middle;
     }
-  #qr-code{
-    margin-top:60px;
-    margin-right:3000px:
-  }
+    /* Adjust margin and positioning */
+    #qr-code {
+        margin-right: 10px; /* Decreased margin between QR code and seal */
+        margin-top: 20px;   /* Adjusted vertical alignment */
+    }
+    
+    /* Move both elements to the left on larger screens */
+    @media (min-width: 992px) {
+        #qr-code, #IframeSeal {
+            margin-left: -20px;
+        }
+    }
 </style>
 
       </div>
