@@ -764,195 +764,24 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-        <section class="bg-1200 overflow-hidden">
-          <div class="container">
-            <h1 class="text-white text-center fs-xl-5 fs-lg-4 fs-md-3 fs-2 position-relative">Why Choose Us?</h1>
-
-            <div class="circular-layout">
-              <!-- Central logo -->
-              <div class="logo">
-                <img src="assets/logo copy.png" alt="Central Logo">
-              </div>
-
-              <!-- Eight boxes in a circular arrangement around the logo -->
-              <div class="box box1">Petrol pump</div>
-              <div class="box box2">Tyre care</div>
-              <div class="box box3">Weigh bridge</div>
-              <div class="box box4">Work shop</div>
-              <div class="box box5">Spare parts</div>
-              <div class="box box6">Driver</div>
-              <div class="box box7">Truck</div>
-              <div class="box box8">Transport</div>
-            </div>
-          </div>
-        </section>
-
         <style>
-.circular-layout {
-    position: relative;
-    width: 600px;
-    height: 600px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
-.logo img {
-    width: 100px;
-    height: auto;
-}
-/* Neon glow effect with pop-up animation on hover */
-/* Neon glow effect on hover */
-.box:hover {
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-
-.box {
-    position: absolute;
-    width: 140px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* Position boxes in a circular layout */
-.box1 { top: 10%; left: 50%; transform: translate(-50%, 0); }
-.box2 { top: 25%; left: 85%; transform: translate(-50%, -50%); }
-.box3 { top: 50%; left: 90%; transform: translate(-50%, -50%); }
-.box4 { top: 75%; left: 85%; transform: translate(-50%, -50%); }
-.box5 { top: 90%; left: 50%; transform: translate(-50%, -100%); }
-.box6 { top: 75%; left: 15%; transform: translate(-50%, -50%); }
-.box7 { top: 50%; left: 10%; transform: translate(-50%, -50%); }
-.box8 { top: 25%; left: 15%; transform: translate(-50%, -50%); }
-
-/* Neon line from logo to each box */
-/* Adjust neon line positioning to start below each box */
-/* Adjust neon line positioning to start just below each box's center */
-/* Adjust neon line positioning to start just below each box's center */
-.box::before {
-    content: '';
-    position: absolute;
-    top: 90%; /* Start just below the center */
-    left: 50%;
-    height: 3px;
-    background: #0ff; /* Neon color */
-    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-    transform-origin: left center;
-}
-
-/* Specific adjustment for horizontal lines */
-.box3::before, .box7::before { /* "Truck" and "Weigh bridge" */
-    top: 92%; /* Adjusted to make line start below center */
-}
-
-
-/* Adjusted positioning for consistent line direction */
-.box1::before { 
-    width: 95px; 
-    transform: rotate(90deg); 
-    top: 110%; 
-    left: 50%; 
-}
-
-.box2::before { 
-    width: 115px; 
-    transform: rotate(135deg); 
-    top: 100%; 
-    left: -1%; 
-}
-
-.box3::before { 
-    width: 95px; 
-    transform: rotate(180deg); 
-    top: 50%; 
-    left: -5%; 
-}
-
-.box4::before { 
-    width: 115px; 
-    transform: rotate(225deg); 
-    top: 1%; 
-    left: -10%; 
-}
-
-.box5::before { 
-    width: 95px; 
-    transform: rotate(270deg); 
-    top: -15%; 
-    left: 50%; 
-}
-
-.box6::before { 
-    width: 115px; 
-    transform: rotate(315deg); 
-    top: 1%; 
-    left: 100%; 
-}
-
-.box7::before { 
-    width: 100px; 
-    transform: rotate(0deg); 
-    top: 50%; 
-    left: 105%; 
-}
-
-.box8::before { 
-    width: 115px; 
-    transform: rotate(45deg); 
-    top: 100%; 
-    left: 100%; 
-}
-
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .circular-layout {
-        width: 300px;
-        height: 300px;
+         
+         .full-background {
+          margin: 0;
+      padding: 0;
+      height: 120vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('assets/choose.png') no-repeat center center fixed;
+      background-size: contain; /* Ensures the entire image is visible */
+      background-color: #201c34; /* Fallback color if the image doesn't fill */
     }
-
-    .logo img {
-        width: 80px;
-    }
-
-    .box {
-        width: 90px;
-        height: 50px;
-        font-size: 0.8rem;
-    }
-
-    /* Shortened line lengths for smaller screens */
-    .box1::before { width: 20px; }
-    .box2::before { width: 35px; }
-    .box3::before { width: 25px; }
-    .box4::before { width: 35px; }
-    .box5::before { width: 20px; }
-    .box6::before { width: 35px; }
-    .box7::before { width: 25px; }
-    .box8::before { width: 35px; }
-}
-
-
-
         </style>
+    
 
+        <section class="full-background"></section>
 
       <!-- <section> close ============================-->
       <!-- ============================================-->
