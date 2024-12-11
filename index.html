@@ -766,32 +766,23 @@
       <!-- <section> begin ============================-->
        <!-- ============================================-->
       <!-- <section> begin ============================-->
-        <section class="choose" style="
-        background-image: url('assets/choose.png'); 
-        background-size: contain; 
-        background-repeat: no-repeat; 
-        background-position: center; 
-        width: 100%; 
-        height: 100vh; 
-        
-        padding: 0;">
         <style>
-          @media (max-width: 767px) {
-            .choose {
-              margin-top:-350px; 
-              margin-bottom:-390px; }
-            }
-            @media (min-width: 1200px) {
-              .choose {
-                width: 120%; 
-                margin-top:-150px; 
-                background-color: #1e1e34;
-              }
-            }
-       
-        </style>
-       
-    </section>
+            .full-background {
+          margin: 0;
+      padding: 0;
+      height: 120vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('assets/choose.jpeg') no-repeat center center fixed;
+      background-size: contain; /* Ensures the entire image is visible */
+      background-color: #201c34; /* Fallback color if the image doesn't fill */
+    }
+
+          </style>
+           <section class="full-background"></section>
+
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
