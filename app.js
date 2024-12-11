@@ -75,7 +75,7 @@ function handleRoleChange() {
                     <option value="">Select Business Type</option>
                     <option value="Petrol Pump">Petrol Pump</option>
                     <option value="Tyre Shop">Tyre Shop</option>
-                    <option value="Water Service">Water service station </option>
+                    <option value="Water Service Station">Water service station </option>
 
                 
                     <option value="Workshop">Workshop</option>
@@ -84,11 +84,11 @@ function handleRoleChange() {
 
                     <option value="Alignment Shop">Alignment shop</option>
                     <option value="Recovery Van">Recovery van</option>
-                    <option value="Mobile/puncture shop">Mobile/puncture shop</option>
+                    <option value="Mobile/Puncture Shop">Mobile/puncture shop</option>
 
                     <option value="Parking">Parking</option>
                     <option value="Spare Parts">Spare parts</option>
-                    <option value="Restaurants/Dhabha">Restaurants/Dhaba</option>
+                    <option value="Restaurants">Restaurants/Dhaba</option>
 
 
                     <!-- Add more business types as needed -->
@@ -154,7 +154,7 @@ function handleVehicleTypeChange() {
     }
 }
 
-document.getElementById('registrationForm').onsubmit = function(event) {
+document.getElementById('Register').onsubmit = function(event) {
     event.preventDefault();
     
     var form = event.target;
