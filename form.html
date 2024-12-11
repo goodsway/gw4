@@ -271,7 +271,7 @@ navLinks.forEach(link => {
         </div>
         <div class="title" >Registration Form</div>
         <div class="content">
-            <form id="registrationForm" method="POST" action="https://script.google.com/macros/s/AKfycbxfcJYUrD7WY49pjjToBzOcdLD6dCAMyH74T4JZVkTVvIO7UtUzeX87cFxlmJJ0ukE/exec">
+            <form id="Register" method="POST" action="https://script.google.com/macros/s/AKfycbxfcJYUrD7WY49pjjToBzOcdLD6dCAMyH74T4JZVkTVvIO7UtUzeX87cFxlmJJ0ukE/exec">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
@@ -365,11 +365,40 @@ navLinks.forEach(link => {
     <span class="details">Comments</span>
     <textarea name="Comments" placeholder="Enter your comments here" rows="4" required></textarea>
 </div>
+<div style="margin-top: 20px;">
+    <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+    <label for="acceptTerms">
+      I accept the <a href="terms.html" target="_blank">T&C</a> and <a href="privacy.html" target="_blank">privacy policy</a>, and I agree to be contacted via email and SMS with news and updates.
+    </label>
+  </div>
 
+  
 <!-- Register Button -->
 <div class="button">
-    <input type="submit" value="Register">
+    <button 
+      type="submit" 
+      id="register-button" 
+      disabled 
+      style="
+         height: 45px;
+         margin: 35px auto;
+         width: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center; /* Ensures text is vertically centered */
+         border-radius: 5px;
+         border: none;
+         color: #fff;
+         font-size: 18px;
+         font-weight: 500;
+         letter-spacing: 1px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         background: linear-gradient(135deg, #71b7e6, #9b59b6);
+      "
+    >Register </button>
 </div>
+
 
             </form>
         </div>
@@ -377,5 +406,15 @@ navLinks.forEach(link => {
  </div>
 </div>
     <script src="app.js"></script>
+    <script>
+        // Get references to the checkbox and the button
+        const checkbox = document.getElementById('acceptTerms');
+        const registerButton = document.getElementById('register-button');
+      
+        // Enable or disable the button based on the checkbox state
+        checkbox.addEventListener('change', () => {
+          registerButton.disabled = !checkbox.checked;
+        });
+      </script>
 </body>
 </html>
