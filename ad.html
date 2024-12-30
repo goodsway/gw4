@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods Way Promo</title>
+    <style>
+        /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set full-page height and prevent scrolling */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Background container styles */
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;  /* Prevent background repetition */
+    background-position: center;
+}
+
+/* Image styling */
+.background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Large screen - set background image */
+@media (min-width: 1024px) {
+    .background-container {
+        background-image: url('assets/ad/engcomp.png');
+        background-size: cover; /* Makes the image cover the whole screen */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .background-container img {
+        display: none; /* Hide the <img> tag on large screens */
+    }
+
+    /* Button container for large screens */
+    .button-container {
+        position: absolute;
+        top: 30%;  /* Adjust position in px */
+        left: 15%; /* Adjust position in px */
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px;
+    }
+
+    .button-container button {
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        cursor: pointer;
+        border-radius: 10px; /* Rounded corners */
+    }
+    /* Download Button - Large Screen Position */
+    .download-button {
+        background-color: green;   /* Green background */
+        color: white;              /* White text */
+        padding: 12px 24px;
+        text-align: center;
+        border: 2px solid black;   /* Border around button */
+        cursor: pointer;
+        border-radius: 10px;       /* Rounded corners */
+        font-size: 16px;
+        text-decoration: none;     /* Remove underline from the link */
+        margin-top: 10px;   
+        margin-left: 200px;       /* Space between buttons */
+        position: absolute;
+        top: var(--download-btn-top-large, 80%);  /* Editable position for large screen */
+        left: var(--download-btn-left-large, 50%); /* Editable position for large screen */
+        transform: translateX(-50%); /* Center it horizontally */
+    }
+}
+
+/* Small screen - button container styling */
+@media (max-width: 1023px) {
+    /* Button container for small screens */
+    .button-container {
+        position: absolute;
+        top: 72.1%;  /* Adjust position in px */
+        left: 50%; /* Adjust position in px */
+        transform: translateX(-50%);
+        display: flex;
+        gap: 2px;
+        flex-wrap: nowrap; /* Arrange buttons horizontally */
+        justify-content: center;
+    }
+
+    .button-container button {
+        padding: 6px 12px;  /* Slightly smaller padding */
+        font-size: 14px;     /* Decrease font size */
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        cursor: pointer;
+        border-radius: 10px; /* Rounded corners */
+    }
+    /* Download Button - Small Screen Position */
+    .download-button {
+        background-color: green;  /* Green background */
+        color: white;             /* White text */
+        padding: 15px 40px;
+        text-align: center;
+        border: 2px solid black;  /* Border around button */
+        cursor: pointer;
+        border-radius: 10px;      /* Rounded corners */
+        font-size: 20px;          /* Slightly smaller font size for mobile */
+        text-decoration: none;    /* Remove underline from the link */
+        margin-top: 100px;         /* Space between buttons */
+        position: absolute;
+        top: var(--download-btn-top-small, 85%); /* Editable position for small screen */
+        left: var(--download-btn-left-small, 50%); /* Editable position for small screen */
+        transform: translateX(-50%); /* Center it horizontally */
+    }
+    
+   
+}
+
+    </style>
+</head>
+<body>
+    <!-- Background container -->
+    <div class="background-container" id="background-container">
+        <img src="assets/ad/engmob.png" alt="Goods Way Promo" id="background-image">
+    </div>
+
+    <!-- Button container -->
+    <div class="button-container">
+        <button onclick="changeBackground('english')">English</button>
+        <button onclick="changeBackground('hindi')">Hindi</button>
+        <button onclick="changeBackground('tamil')">Tamil</button>
+        <button onclick="changeBackground('telugu')">Telugu</button>
+        <button onclick="changeBackground('kannada')">Kannada</button>
+
+        <a href="https://rmsgoodstransport.page.link/app" class="download-button">Download</a>
+
+    </div>
+
+    <script>
+        function changeBackground(language) {
+            const container = document.getElementById('background-container');
+            const imgElement = document.getElementById('background-image');
+
+            // Determine if it's a large or small screen
+            const isLargeScreen = window.innerWidth >= 1024;
+
+            // Change background image based on the selected language
+            let imagePath = '';
+            if (language === 'english') {
+                imagePath = isLargeScreen ? 'assets/ad/engcomp.png' : 'assets/ad/engmob.png';
+            } else if (language === 'hindi') {
+                imagePath = isLargeScreen ? 'assets/ad/hindicomp.png' : 'assets/ad/hindimob.png';
+            } else if (language === 'tamil') {
+                imagePath = isLargeScreen ? 'assets/ad/tamilcomp.png' : 'assets/ad/tamilmob.png';
+            } else if (language === 'telugu') {
+                imagePath = isLargeScreen ? 'assets/ad/telugucomp.png' : 'assets/ad/telugumob.png';
+            } else if (language === 'kannada') {
+                imagePath = isLargeScreen ? 'assets/ad/kannadacomp.png' : 'assets/ad/kannadamob.png';
+            }
+
+            // For mobile: change the background image of the container without changing the <img> tag
+            if (!isLargeScreen) {
+                container.style.backgroundImage = `url(${imagePath})`;
+                container.style.backgroundSize = 'contain'; // Ensure background image is contained and doesn't stretch
+                container.style.backgroundPosition = 'center'; // Center the background image
+                container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
+                imgElement.style.display = 'none';  // Hide the <img> element
+            } else {
+                // For large screens: just change the background image and display the <img> element
+                container.style.backgroundImage = `url(${imagePath})`;
+                imgElement.style.display = 'none';  // Hide the <img> element on large screens
+            }
+        }
+    </script>
+</body>
+</html>
