@@ -45,7 +45,7 @@ html, body {
 /* Large screen - set background image */
 @media (min-width: 1024px) {
     .background-container {
-        background-image: url('assets/ad/engcomp.png');
+        background-image: url('assets/engcomp.png');
         background-size: cover; /* Makes the image cover the whole screen */
         background-position: center;
         background-repeat: no-repeat;
@@ -142,7 +142,7 @@ html, body {
 <body>
     <!-- Background container -->
     <div class="background-container" id="background-container">
-        <img src="assets/ad/engmob.png" alt="Goods Way Promo" id="background-image">
+        <img src="assets/engmob.png" alt="Goods Way Promo" id="background-image">
     </div>
 
     <!-- Button container -->
@@ -168,15 +168,15 @@ html, body {
             // Change background image based on the selected language
             let imagePath = '';
             if (language === 'english') {
-                imagePath = isLargeScreen ? 'assets/ad/engcomp.png' : 'assets/ad/engmob.png';
+                imagePath = isLargeScreen ? 'assets/engcomp.png' : 'assets/engmob.png';
             } else if (language === 'hindi') {
-                imagePath = isLargeScreen ? 'assets/ad/hindicomp.png' : 'assets/ad/hindimob.png';
+                imagePath = isLargeScreen ? 'assets/hindicomp.png' : 'assets/hindimob.png';
             } else if (language === 'tamil') {
-                imagePath = isLargeScreen ? 'assets/ad/tamilcomp.png' : 'assets/ad/tamilmob.png';
+                imagePath = isLargeScreen ? 'assets/tamilcomp.png' : 'assets/tamilmob.png';
             } else if (language === 'telugu') {
-                imagePath = isLargeScreen ? 'assets/ad/telugucomp.png' : 'assets/ad/telugumob.png';
+                imagePath = isLargeScreen ? 'assets/telugucomp.png' : 'assets/telugumob.png';
             } else if (language === 'kannada') {
-                imagePath = isLargeScreen ? 'assets/ad/kannadacomp.png' : 'assets/ad/kannadamob.png';
+                imagePath = isLargeScreen ? 'assets/annadacomp.png' : 'assets/kannadamob.png';
             }
 
             // For mobile: change the background image of the container without changing the <img> tag
