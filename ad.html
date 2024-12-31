@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <title>Goods Way Promo</title>
     <style>
         /* Reset styles */
@@ -45,7 +46,7 @@ html, body {
 /* Large screen - set background image */
 @media (min-width: 1024px) {
     .background-container {
-        background-image: url('assets/engcomp.png');
+        background-image: url('assets/ad/engcomp.png');
         background-size: cover; /* Makes the image cover the whole screen */
         background-position: center;
         background-repeat: no-repeat;
@@ -67,93 +68,195 @@ html, body {
 
     .button-container button {
         padding: 10px 20px;
-        background-color: white;
-        color: black;
-        border: 2px solid black;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        background-color: #000;
         cursor: pointer;
         border-radius: 10px; /* Rounded corners */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
+        transition: all 0.3s ease;
     }
-    /* Download Button - Large Screen Position */
-    .download-button {
-        background-color: green;   /* Green background */
-        color: white;              /* White text */
-        padding: 12px 24px;
+    .button-container button:hover {
+        box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
+        transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+
+      .download-button {
+        background-color: #ff6600;  /* Neon green background */
+        color: #fbf7f7; 
+        font: 1rem sans-serif;              /* Black text */
+        padding: 10px 20px;
         text-align: center;
-        border: 2px solid black;   /* Border around button */
-        cursor: pointer;
-        border-radius: 10px;       /* Rounded corners */
-        font-size: 16px;
-        text-decoration: none;     /* Remove underline from the link */
-        margin-top: 10px;   
-        margin-left: 200px;       /* Space between buttons */
+        border-radius: 10px;      /* Rounded corners */
+        font-size: 14px;          /* Slightly smaller font size for mobile */
+        text-decoration: none;    /* Remove underline from the link */
+        margin-top: -10px;   
+        margin-left: 210px;      /* Space between buttons */
         position: absolute;
-        top: var(--download-btn-top-large, 80%);  /* Editable position for large screen */
-        left: var(--download-btn-left-large, 50%); /* Editable position for large screen */
-        transform: translateX(-50%); /* Center it horizontally */
+        top: var(--download-btn-top-small, 85%); /* Editable position for small screen */
+        left: var(--download-btn-left-small, 40%); /* Editable position for small screen */
+        transform: translateX(-50%);
+        box-shadow: 0 0 15px#ff6600, 0 0 30px #ff6600;
     }
+    .download-button:hover {
+        box-shadow: 0 0 25px #fcfcfc, 0 0 50px #ff6600, 0 0 75px #ff6600;
+
+    }
+
 }
 
+/* Small Screen Styling */
+@media (max-width: 1023px) {
+    .icon-container {
+        margin-top: -230px;
+        top: var(--icon-container-bottom-small, 10%);
+        left: var(--icon-container-left-small, 50%);
+        transform: translateX(-50%);
+        flex-direction: row; /* Arrange icons horizontally */
+    }
+
+    .icon-container i {
+        font-size: 100px; /* Slightly smaller icons on mobile */
+    }
+}
+  
 /* Small screen - button container styling */
 @media (max-width: 1023px) {
     /* Button container for small screens */
     .button-container {
         position: absolute;
-        top: 72%;  /* Adjust position in px */
+        top: 90%;  /* Adjust position in px */
         left: 50%; /* Adjust position in px */
         transform: translateX(-50%);
         display: flex;
-        gap: 2px;
+        gap: 15px;
         flex-wrap: nowrap; /* Arrange buttons horizontally */
         justify-content: center;
+        cursor: pointer;
+        border-radius: 10px; /* Rounded corners */
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+        box-shadow: 0 0 1px #76efb7, 1 1 0.5px #00ff88;
+        transition: all 0.3s ease;
     }
 
     .button-container button {
-        padding: 6px 12px;  /* Slightly smaller padding */
-        font-size: 14px;     /* Decrease font size */
-        background-color: white;
-        color: black;
-        border: 2px solid black;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        background-color: #000;
         cursor: pointer;
         border-radius: 10px; /* Rounded corners */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
+        transition: all 0.3s ease;
     }
-    /* Download Button - Small Screen Position */
-    .download-button {
-        background-color: green;  /* Green background */
-        color: white;             /* White text */
-        padding: 15px 40px;
+
+    .button-container button:hover {
+        box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
+        transform: scale(1.1); /* Slightly enlarge the button on hover */
+    }
+   /* Download Button - Small Screen Position */
+   .download-button {
+        background-color: #dcf404;  /* Neon green background */
+        color: #000;               /* Black text */
+        padding: 10px 20px;
         text-align: center;
-        border: 2px solid black;  /* Border around button */
-        cursor: pointer;
         border-radius: 10px;      /* Rounded corners */
-        font-size: 20px;          /* Slightly smaller font size for mobile */
+        font-size: 25px;          /* Slightly smaller font size for mobile */
         text-decoration: none;    /* Remove underline from the link */
-        margin-top: 100px;         /* Space between buttons */
+        margin-top: -130px;  
+        margin-left: 40px;       /* Space between buttons */
         position: absolute;
         top: var(--download-btn-top-small, 85%); /* Editable position for small screen */
-        left: var(--download-btn-left-small, 50%); /* Editable position for small screen */
-        transform: translateX(-50%); /* Center it horizontally */
+        left: var(--download-btn-left-small, 40%); /* Editable position for small screen */
+        transform: translateX(-50%);
+        box-shadow: 0 0 15px #dcf404, 0 0 0.5px #dcf404;
     }
-    
-   
+
+    .download-button:hover {
+        box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
+    }
 }
+/* Icon styling */
+.icon-container {
+    position: absolute;
+    display: flex;
+    gap: 20px; /* Spacing between icons */
+}
+
+.icon-container i {
+    font-size: 24px; /* Adjust size of icons */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-container i:hover {
+    transform: scale(1.2); /* Slight enlarge on hover */
+}
+
+/* Facebook Icon */
+#facebook-icon {
+    color: #3b5998; /* Blue color */
+}
+
+/* Instagram Icon */
+#instagram-icon {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Instagram gradient */
+}
+
+/* YouTube Icon */
+#youtube-icon {
+    color: #ff0000; /* Red color */
+}
+
+/* Large Screen Styling */
+@media (min-width: 1024px) {
+    .icon-container {
+        top: var(--icon-container-top-large, 138%);
+        left: var(--icon-container-left-large, -70%);
+        flex-direction: row; /* Arrange icons vertically */
+    }
+    .icon-container i {
+        font-size: 30px; /* Increase icon size */
+    }
+}
+
+
+
+
 
     </style>
 </head>
 <body>
     <!-- Background container -->
     <div class="background-container" id="background-container">
-        <img src="assets/engmob.png" alt="Goods Way Promo" id="background-image">
+        <img src="assets/ad/engmob.png" alt="Goods Way Promo" id="background-image">
     </div>
 
     <!-- Button container -->
     <div class="button-container">
         <button onclick="changeBackground('english')">English</button>
-        <button onclick="changeBackground('hindi')">Hindi</button>
-        <button onclick="changeBackground('tamil')">Tamil</button>
-        <button onclick="changeBackground('telugu')">Telugu</button>
-        <button onclick="changeBackground('kannada')">Kannada</button>
+        <button onclick="changeBackground('hindi')">हिन्दी</button>
+        <button onclick="changeBackground('tamil')">தமிழ்</button>
+        <button onclick="changeBackground('telugu')">తెలుగు</button>
+        <button onclick="changeBackground('kannada')"> ಕನ್ನಡ</button>
+
+        <div class="icon-container">
+            <i class="fa-brands fa-facebook" id="facebook-icon"></i>
+            <i class="fa-brands fa-instagram" id="instagram-icon"></i>
+            <i class="fa-brands fa-youtube" id="youtube-icon"></i>
+        </div>
 
         <a href="https://rmsgoodstransport.page.link/app" class="download-button">Download</a>
+
+       
 
     </div>
 
@@ -168,15 +271,15 @@ html, body {
             // Change background image based on the selected language
             let imagePath = '';
             if (language === 'english') {
-                imagePath = isLargeScreen ? 'assets/engcomp.png' : 'assets/engmob.png';
+                imagePath = isLargeScreen ? 'assets/ad/engcomp.png' : 'assets/ad/engmob.png';
             } else if (language === 'hindi') {
-                imagePath = isLargeScreen ? 'assets/hindicomp.png' : 'assets/hindimob.png';
+                imagePath = isLargeScreen ? 'assets/ad/hindicomp.png' : 'assets/ad/hindimob.png';
             } else if (language === 'tamil') {
-                imagePath = isLargeScreen ? 'assets/tamilcomp.png' : 'assets/tamilmob.png';
+                imagePath = isLargeScreen ? 'assets/ad/tamilcomp.png' : 'assets/ad/tamilmob.png';
             } else if (language === 'telugu') {
-                imagePath = isLargeScreen ? 'assets/telugucomp.png' : 'assets/telugumob.png';
+                imagePath = isLargeScreen ? 'assets/ad/telugucomp.png' : 'assets/ad/telugumob.png';
             } else if (language === 'kannada') {
-                imagePath = isLargeScreen ? 'assets/annadacomp.png' : 'assets/kannadamob.png';
+                imagePath = isLargeScreen ? 'assets/ad/kannadacomp.png' : 'assets/ad/kannadamob.png';
             }
 
             // For mobile: change the background image of the container without changing the <img> tag
