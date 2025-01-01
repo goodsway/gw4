@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodsWay App Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            height: 500px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 50px;
+        }
+
+        .language-list {
+            margin-top: 50px;
+
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .language-list li {
+
+            margin: 10px 0;
+        }
+
+        .language-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 38px;
+            transition: color 0.3s;
+        }
+
+        .language-list a:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .language-list a {
+                font-size: 16px;
+            }
+        }
+        .contact {
+            position: fixed;
+            bottom: 200px;
+            left: 950px;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .contact:hover {
+            background-color: #0056b3;
+        }
+
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 35px;
+        }
+
+            @media (max-width: 1023px) {
+            .contact {
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 120px;
+            }
+            }
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background-color: #0a0909;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.logob{
+    width: 150px;
+    height: auto;
+}
+@media (max-width: 1024px) {
+    .logo {
+        height: 120px;
+    }
+    .logob{
+        width: 80px;
+        height: auto;
+    }
+    .contact {
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 120px;
+        width: 100px;
+        margin-bottom: 200px;
+    }
+     .contact a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .language-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 28px;
+            transition: color 0.3s;
+        }
+
+    
+}
+            
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/img/logos/Normal.png" alt="Logo" class="logob">
+    
+    </div>
+
+    <div class="container">
+        <h1>GoodsWay App Support</h1>
+        <ul class="language-list">
+            <li><a href="assets/pdf/1 ENGLISH (2) (1).pdf" target="_blank">English</a></li>
+            <li><a href="assets/pdf/2.HINDI (1).pdf" target="_blank">Hindi</a></li>
+            <li><a href="assets/pdf/3.KANNADA (1).pdf" target="_blank">Kannada</a></li>
+            <li><a href="assets/pdf/5.TELUGU (1).pdf" target="_blank">Telugu</a></li>
+            <li><a href="assets/pdf/4.TAMIL (1).pdf" target="_blank">Tamil</a></li>
+        </ul>
+    </div>
+    <div class="contact">
+        <a href="form.html" class="text-white">Contact Us</a>
+    </div>
+</body>
+</html>
