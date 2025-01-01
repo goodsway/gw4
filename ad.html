@@ -17,7 +17,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow:auto;
+    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +26,12 @@ html, body {
 
 /* Background container styles */
 .background-container {
-    margin: 0;
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
     background-repeat: no-repeat;  /* Prevent background repetition */
     background-position: center;
 }
@@ -42,7 +40,7 @@ html, body {
 .background-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Large screen - set background image */
@@ -123,7 +121,6 @@ html, body {
     .icon-container i {
         font-size: 100px; /* Slightly smaller icons on mobile */
     }
-
 }
   
 /* Small screen - button container styling */
@@ -219,92 +216,6 @@ html, body {
     color: #ff0000; /* Red color */
 }
 
-@media (min-width: 1024px){
-
-.video-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Add some spacing between the videos */
-    width: 300px; /* Adjust the width of the container as needed */
-   height: 15%;
-    position: absolute;
-    top: -50px;
-    left:950px;
-    transform: translateX(-50%);
-    align-items: center;
-}
-
-.video-container iframe {
-    width: 100%; /* Adjust the video width */
-    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-    align-items: center; /* Center align videos horizontally */
-}
-
-.video-container iframe {
-    width: 80%; /* Adjust the video width */
-    max-width: 800px; /* Optional: limit the maximum width */
-    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-}
-}
-@media (min-width: 1023px) {
-    .video-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Add some spacing between the videos */
-    width: 300px; /* Adjust the width of the container as needed */
-   height: 15%;
-    position: absolute;
-    top: 50px;
-    left:50px;
-    transform: translateX(-50%);
-    align-items: center;
-    margin-left: 1010px;
-    margin-top: -70px;
-}
-
-.video-container iframe {
-    width: 100%; /* Adjust the video width */
-    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-    align-items: center; /* Center align videos horizontally */
-}
-
-.video-container iframe {
-    width: 80%; /* Adjust the video width */
-    max-width: 800px; /* Optional: limit the maximum width */
-    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-}
-}
-
-@media (max-width: 1023px) {
-    .video-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Add some spacing between the videos */
-    width: 300px; /* Adjust the width of the container as needed */
-   height: 15%;
-    position: absolute;
-    top: 50px;
-    left:50px;
-    transform: translateX(-50%);
-    align-items: center;
-    margin-left: 130px;
-    margin-top: 70px;
-}
-
-.video-container iframe {
-    width: 100%; /* Adjust the video width */
-    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-    align-items: center; /* Center align videos horizontally */
-}
-
-.video-container iframe {
-    width: 80%; /* Adjust the video width */
-    max-width: 800px; /* Optional: limit the maximum width */
-    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
-}
-}
-
-
 /* Large Screen Styling */
 @media (min-width: 1024px) {
     .icon-container {
@@ -319,15 +230,47 @@ html, body {
 
 
 
-
+@media (min-width: 1024px) {
+    .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add some spacing between the videos */
+    width: 300px; /* Adjust the width of the container as needed */
+   height: 15%;
+    position: absolute;
+    top: 50px;
+    left:50px;
+    transform: translateX(-50%);
+    align-items: center;
+    margin-left: 1010px;
+    margin-top: -70px;
+    
+}
+}
+@media (max-width: 1024px) {
+    .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add some spacing between the videos */
+    width: 300px; /* Adjust the width of the container as needed */
+   height: 15%;
+    position: absolute;
+    top: 50px;
+    left:50px;
+    transform: translateX(-50%);
+    align-items: center;
+    margin-left: 130px;
+    margin-top: 70px;
+    }
+    
+}
 
     </style>
 </head>
 <body>
     <!-- Background container -->
-    <div class="background-container" style=" 
-    object-fit: cover;" id="background-container">
-        <img src="assets/engmob.png"  alt="Goods Way Promo" id="background-image" >
+    <div class="background-container" id="background-container">
+        <img src="assets/engmob.png" alt="Goods Way Promo" id="background-image">
     </div>
 
     <!-- Button container -->
@@ -343,117 +286,33 @@ html, body {
             <i class="fa-brands fa-instagram" id="instagram-icon"></i>
             <i class="fa-brands fa-youtube" id="youtube-icon"></i>
         </div>
-
+<div>
         <a href="https://rmsgoodstransport.page.link/app" class="download-button">Download</a>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/mqv9wWDbpL8?si=Yv_yj6oXlGH3Y-2g" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/cPfAjrjHHCE?si=E4cxEZ-n6AjY6yxt" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </iframe>
-            <iframe src="https://www.youtube.com/embed/x8orpl9jLFc?si=grb6_CJ8LiuhYpA6" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-
     </div>
-    <!-- Video Section -->
-    <style>
-       
-        .containertwo {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .navbar {
-            background-color: #000;
-            padding: 10px 0;
-            color: white;
-        }
-        .navbar h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .back-video {
-            margin: 30px 0;
-        }
-        video {
-            width: 100%;
-            max-width: 800px;
-            border-radius: 8px;
-        }
-        .language-buttonstwo {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px; /* Space between buttons */
-            margin-top: 20px;
-        }
-        .language-buttonstwo button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        .language-buttonstwo button:hover {
-            background-color: #0056b3;
-        }
-        @media (max-width: 600px) {
-            .language-buttonstwo button {
-                font-size: 14px; /* Adjust font size for small screens */
-                padding: 8px 16px;
-            }
-        }
-    </style>
-     <!-- Language Buttons -->
-     <div class="language-buttonstwo">
-        <button onclick="changeVideo('assets/video/MAIN_HINDI.mp4')">Hindi</button>
-        <button onclick="changeVideo('assets/video/MAIN_KANNADA.mp4')">Kannada</button>
-     
-        <button onclick="changeVideo('assets/video/MAIN_TAMIL.mp4')">Tamil</button>
-        <button onclick="changeVideo('assets/video/MAIN_TELUGU.mp4')">Telugu</button>
-           <button onclick="changeVideo('assets/video/MAIN_MALAYALAM.mp4')">Malayalam</button>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/mqv9wWDbpL8?si=Yv_yj6oXlGH3Y-2g" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+        <iframe src="https://www.youtube.com/embed/cPfAjrjHHCE?si=E4cxEZ-n6AjY6yxt" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+        <iframe src="https://www.youtube.com/embed/x8orpl9jLFc?si=grb6_CJ8LiuhYpA6" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
     </div>
-    <div class="containertwo">
-        <div class="back-video">
-            <video id="main-video" controls>
-                <source id="video-source" src="assets/video/MAIN_HINDI.mp4 " type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-       
-  </div>
-
-    <!-- JavaScript -->
-    <script>
-        function changeVideo(videoSrc) {
-            const videoElement = document.getElementById('main-video');
-            const sourceElement = document.getElementById('video-source');
-            sourceElement.src = videoSrc;
-            videoElement.load();
-        }
-    </script>
-
        
 
     </div>
