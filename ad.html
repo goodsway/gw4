@@ -473,6 +473,8 @@ html, body {
             container.style.backgroundSize = 'contain'; // Ensure background image is contained and doesn't stretch
             container.style.backgroundPosition = 'center'; // Center the background image
             container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
+                        container.style.objectFit = 'auto';
+
             imgElement.style.display = 'none';  // Hide the <img> element
         } else {
             // For large screens: just change the background image and display the <img> element
