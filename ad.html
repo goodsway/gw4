@@ -289,6 +289,8 @@ html, body {
                 container.style.backgroundPosition = 'center'; // Center the background image
                 container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
                 imgElement.style.display = 'none';  // Hide the <img> element
+                container.style.backgroundSize = 'cover';
+
             } else {
                 // For large screens: just change the background image and display the <img> element
                 container.style.backgroundImage = `url(${imagePath})`;
