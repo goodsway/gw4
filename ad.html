@@ -40,7 +40,7 @@ html, body {
 .background-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: auto;
 }
 
 /* Large screen - set background image */
@@ -291,7 +291,7 @@ html, body {
                 container.style.backgroundPosition = 'center'; // Center the background image
                 container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
                 imgElement.style.display = 'none';  // Hide the <img> element
-                container.style.backgroundSize = 'cover';
+                container.style.backgroundSize = 'auto';
 
             } else {
                 // For large screens: just change the background image and display the <img> element
