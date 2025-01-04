@@ -112,10 +112,14 @@
     @media (max-width: 1023px) {
     .background-container {
         background-size: cover; /* Ensures the image covers the screen without cutting off */
+        top: 3%;
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh; /* Make sure the background covers the full viewport height */
-        margin-top: 100px;
+        margin-top: 80px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: black;
     }
 
    /* Button container for small screens - Fixed position */
@@ -158,14 +162,14 @@
     /* Video container for small screens */
     .video-container {
         position: relative;
-        top: 100%;
+        top: 90%;
         left: 0;
         display: flex;
         flex-direction: column;
         gap: 15px;
         width: 100%;
         z-index: 10;
-        margin-top: -700px;
+        margin-top: -600px;
         margin-left: 30px;
     }
 
