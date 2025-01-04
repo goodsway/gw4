@@ -24,7 +24,6 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack content vertically */
-    object-fit: auto;
 }
 /* Background container styles */
 .background-container {
@@ -36,17 +35,6 @@ html, body {
     align-items: center;
     background-repeat: no-repeat;  /* Prevent background repetition */
     background-position: center;
-    background-size: auto;
-    object-fit: cover;
-    background-color: #000;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Makes the image cover the whole screen */
-    background-position: center;
-    background-color: #000;
-
-
 }
 /* Image styling */
 .background-container img {
@@ -99,10 +87,9 @@ html, body {
 /* Small screen - button container styling */
 @media (max-width: 1023px) {
     .background-container {
-        background-size: auto; /* Makes the image cover the whole screen */
+        background-size: cover; /* Makes the image cover the whole screen */
         background-position: center;
         background-repeat: no-repeat;
-        margin-top: 220px;
     }
     /* Button container for small screens */
     .button-container {
@@ -146,7 +133,7 @@ html, body {
             top: 0;
             left: 0;
             width: 100%;
-            height: 130px;
+            height: 110px;
             background-color: #0a0909;
             display: flex;
             justify-content: center;
@@ -155,7 +142,7 @@ html, body {
         }
 
         .logob {
-            width: 100px;
+            width: 70px;
             height: auto;
         }
 
@@ -175,7 +162,6 @@ html, body {
         <button onclick="changeBackground('tamil')">தமிழ்</button>
         <button onclick="changeBackground('telugu')">తెలుగు</button>
         <button onclick="changeBackground('kannada')"> ಕನ್ನಡ</button>
-    </div>
 
 
 <!-- JavaScript -->
@@ -208,7 +194,6 @@ html, body {
             container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
             imgElement.style.display = 'none';  // Hide the <img> element
             container.style.objectFit = 'auto';
-            container.style.overflow = 'none';
         } else {
             // For large screens: just change the background image and display the <img> element
             container.style.backgroundImage = `url(${imagePath})`;
