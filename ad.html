@@ -16,16 +16,15 @@
     box-sizing: border-box;
 }
 /* Set full-page height and prevent scrolling */
-html, 
-body {
+html, body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Disable horizontal scrolling */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack content vertically */
+    object-fit: auto;
 }
 /* Background container styles */
 .background-container {
@@ -37,6 +36,17 @@ body {
     align-items: center;
     background-repeat: no-repeat;  /* Prevent background repetition */
     background-position: center;
+    background-size: auto;
+    object-fit: cover;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Makes the image cover the whole screen */
+    background-position: center;
+    background-color: #000;
+
+
 }
 /* Image styling */
 .background-container img {
@@ -83,38 +93,6 @@ body {
         box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
         transform: scale(1.1); /* Slightly enlarge the button on hover */
     }
-    /* Video container for large screens */
-    .video-container {
-                position: absolute;
-                top: 30%;
-                right: 80px;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                width: 300px; /* Adjust width as needed */
-            }
-            .video-container iframe {
-                width: 100%;
-                height: 180px;
-                border-radius: 10px;
-            }
-        }
-        /* Small screen - move videos below background image */
-        @media (max-width: 1023px) {
-            .video-container {
-                position: static;
-                margin-top: 20px;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                width: 100%; /* Full width on small screens */
-                align-items: center;
-            }
-            .video-container iframe {
-                width: 90%; /* Adjust width for smaller screens */
-                height: 200px;
-                border-radius: 10px;
-            }
      
 }
   
@@ -124,10 +102,7 @@ body {
         background-size: auto; /* Makes the image cover the whole screen */
         background-position: center;
         background-repeat: no-repeat;
-        margin-top: 890px;
-        width: 3000px;
-        object-fit: auto;
-        background-size: auto;
+        margin-top: 220px;
     }
     /* Button container for small screens */
     .button-container {
@@ -201,29 +176,7 @@ body {
         <button onclick="changeBackground('telugu')">తెలుగు</button>
         <button onclick="changeBackground('kannada')"> ಕನ್ನಡ</button>
     </div>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/mqv9wWDbpL8?si=Yv_yj6oXlGH3Y-2g" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-        </iframe>
-        <iframe src="https://www.youtube.com/embed/cPfAjrjHHCE?si=E4cxEZ-n6AjY6yxt" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-        </iframe>
-        <iframe src="https://www.youtube.com/embed/x8orpl9jLFc?si=grb6_CJ8LiuhYpA6" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-        </iframe>
-    </div>
+
 
 <!-- JavaScript -->
 
@@ -255,6 +208,7 @@ body {
             container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
             imgElement.style.display = 'none';  // Hide the <img> element
             container.style.objectFit = 'auto';
+            container.style.overflow = 'none';
         } else {
             // For large screens: just change the background image and display the <img> element
             container.style.backgroundImage = `url(${imagePath})`;
