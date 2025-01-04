@@ -46,6 +46,36 @@
         height: 100%;
         object-fit: contain;
     }
+    /* Icon styling */
+.icon-container {
+    position: absolute;
+    display: flex;
+    gap: 20px; /* Spacing between icons */
+    margin-left: -200px;
+}
+
+.icon-container i {
+    font-size: 24px; /* Adjust size of icons */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.icon-container i:hover {
+    transform: scale(1.2); /* Slight enlarge on hover */
+}
+/* Facebook Icon */
+#facebook-icon {
+    color: #3b5998; /* Blue color */
+}
+/* Instagram Icon */
+#instagram-icon {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Instagram gradient */
+}
+/* YouTube Icon */
+#youtube-icon {
+    color: #ff0000; /* Red color */
+}
 
     /* Large screen - set background image */
     @media (min-width: 1024px) {
@@ -107,6 +137,43 @@
             border: none;
             border-radius: 10px;
         }
+        .button-containertwo {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+        .video-box {
+        margin-top: 200px;
+        width: 80%;
+        max-width: 600px;
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-box video {
+        width: auto;
+        height: 100%;
+    }
+    .icon-container {
+        position:relative;
+        bottom: 10%;
+        left: -35%;
+        display: flex;
+        gap: 10px;
+        z-index: 9999;
+    }
+    .icon-container i {
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        gap: 25px;
+    }
     }
 
     /* Small screen - button container styling */
@@ -148,19 +215,19 @@
         cursor: pointer;
         border-radius: 10px;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
+        box-shadow: 0 0 15px #00ff88, 0 0 0.5px #00ff88;
         transition: all 0.3s ease;
     }
 
     .button-container button:hover {
-        box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
+        box-shadow: 0 0 25px #00ff88, 0 0 0.5px #00ff88, 0 0 0.5px #00ff88;
         transform: scale(1.1); /* Slightly enlarge the button on hover */
     }
 
     /* Video container for small screens */
     .video-container {
         position: relative;
-        top: 100%;
+        top: 120%;
         left: 0;
         display: flex;
         flex-direction: column;
@@ -176,6 +243,34 @@
         height: 200px;
         border: none;
         border-radius: 15px;
+    }
+    .icon-container {
+        position:relative;
+        bottom: 20%;
+        left: 30%;
+        display: flex;
+        gap: 10px;
+        z-index: 9999;
+    }
+    .icon-container i {
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        gap: 25px;
+    }
+   
+
+    
+}
+
+/* Medium screen - button container styling */
+@media (min-width: 1024px) {
+    .background-container {
+        top: 5%;
+        background-size: cover; /* Ensures the image covers the screen without cutting off */
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -203,10 +298,70 @@
     <img src="assets/img/logos/Normal.png" alt="Logo" class="logob">
 </div>
 
+
 <!-- Background container -->
 <div class="background-container" id="background-container">
     <img src="assets/engmob.png" alt="Goods Way Promo" id="background-image">
 </div>
+
+<div class="icon-container">
+    <a href="https://www.facebook.com/share/1Cyn3FDr25/?mibextid=wwXIfr">
+    <i class="fa-brands fa-facebook" id="facebook-icon" ></i>
+</a>
+<a href="https://www.instagram.com/goodswayindia/profilecard/">
+    <i class="fa-brands fa-instagram" id="instagram-icon"></i>
+</a>
+<a href="https://youtube.com/@goodswayindia?si=XJj7vDz-NF7kUJ0E">
+    <i class="fa-brands fa-youtube" id="youtube-icon"></i>
+</div>
+</a>
+
+<!-- Add this to your webpage -->
+<a href="https://rmsgoodstransport.page.link/app" class="download-btn" target="_blank">Download</a>
+<style>
+    /* Common styles for the button */
+.download-btn {
+  display: inline-block;
+  text-decoration: none;
+  
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 10);
+  transition: background-color 0.3s ease;
+  position: fixed; /* Default for desktop */
+  bottom: 20px; /* Default for desktop */
+  right: 20px; /* Default for desktop */
+}
+
+.download-btn:hover {
+  background-color: #218838;
+}
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+  .download-btn {
+    background-color: #daf50d; /* Green color */
+    position: fixed; /* Makes it float */
+    bottom: 20%;
+    right: 35%;
+    z-index: 9999;
+  }
+}
+
+/* Styles for larger screens (desktop) */
+@media (min-width: 769px) {
+  .download-btn {
+    position: relative; /* Permanent positioning for desktops */
+    bottom: 35%;
+    right: 20%;
+    background-color: #daf50d; /* Green color */
+  }
+}
+
+</style>
 
 <!-- Button container -->
 <div class="button-container">
@@ -241,6 +396,8 @@
             allowfullscreen>
     </iframe>
 </div>
+ 
+
 
 <script>
     function changeBackground(language) {
