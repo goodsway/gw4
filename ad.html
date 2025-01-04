@@ -9,105 +9,133 @@
 <body>
     
 <style>
-        /* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Set full-page height and prevent scrolling */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Stack content vertically */
-}
-/* Background container styles */
-.background-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;  /* Prevent background repetition */
-    background-position: center;
-}
-/* Image styling */
-.background-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-/* Large screen - set background image */
-@media (min-width: 1024px) {
-    .background-container {
-        background-image: url('assets/engcomp.png');
-        background-size: cover; /* Makes the image cover the whole screen */
-        background-position: center;
-        background-repeat: no-repeat;
+    /* Reset styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+    
+    /* Set full-page height and prevent scrolling */
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Stack content vertically */
+    }
+    
+    /* Background container styles */
+    .background-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;  /* Prevent background repetition */
+        background-position: center;
+    }
+    
+    /* Image styling */
     .background-container img {
-        display: none; /* Hide the <img> tag on large screens */
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
-    /* Button container for large screens */
-    .button-container {
-        position: absolute;
-        top: 30%;  /* Adjust position in px */
-        left: 15%; /* Adjust position in px */
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 20px;
-        width: 100px;
+
+    /* Large screen - set background image */
+    @media (min-width: 1024px) {
+        .background-container {
+            background-image: url('assets/engcomp.png');
+            background-size: cover; /* Makes the image cover the whole screen */
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .background-container img {
+            display: none; /* Hide the <img> tag on large screens */
+        }
+
+        /* Button container for large screens */
+        .button-container {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 20px;
+            width: 100px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            background-color: #000;
+            cursor: pointer;
+            border-radius: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
+            transition: all 0.3s ease;
+        }
+        
+        .button-container button:hover {
+            box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
+            transform: scale(1.1); /* Slightly enlarge the button on hover */
+        }
+
+        /* Video container for large screens */
+        .video-container {
+            position: fixed;
+            top: 26%;
+            right: 10%; /* 100px gap from right edge */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .video-container iframe {
+            width: 230px;
+            height: 150px;
+            border: none;
+            border-radius: 10px;
+        }
     }
-    .button-container button {
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-        border: none;
-        background-color: #000;
-        cursor: pointer;
-        border-radius: 10px; /* Rounded corners */
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
-        transition: all 0.3s ease;
-    }
-    .button-container button:hover {
-        box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
-        transform: scale(1.1); /* Slightly enlarge the button on hover */
-    }
-     
-}
-  
-/* Small screen - button container styling */
-@media (max-width: 1023px) {
+
+    /* Small screen - button container styling */
+    @media (max-width: 1023px) {
     .background-container {
-        background-size: cover; /* Makes the image cover the whole screen */
+        background-size: cover; /* Ensures the image covers the screen without cutting off */
         background-position: center;
         background-repeat: no-repeat;
+        height: 100vh; /* Make sure the background covers the full viewport height */
+        margin-top: 100px;
     }
-    /* Button container for small screens */
-    .button-container {
-        position: absolute;
-        top: 90%;  /* Adjust position in px */
+
+   /* Button container for small screens - Fixed position */
+   .button-container {
+        position: fixed; /* Make it fixed so it stays in place */
+        bottom: 10%; /* Adjust the position from the bottom */
+        left: 50%; /* Center the buttons horizontally */
         transform: translateX(-50%);
         display: flex;
-        gap: 15px;
-        flex-wrap: nowrap; /* Arrange buttons horizontally */
+        gap: 5px;
+        flex-wrap: nowrap;
         justify-content: center;
         cursor: pointer;
-        border-radius: 10px; /* Rounded corners */
+        border-radius: 10px;
         text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
         box-shadow: 0 0 1px #76efb7, 1 1 0.5px #00ff88;
         transition: all 0.3s ease;
-        max-height: 40px !important;
-        margin-left: 370px;
+        z-index: 9999; /* Ensure the buttons are in the front */
     }
+
     .button-container button {
         padding: 6px 12px;
         font-size: 14px;
@@ -116,65 +144,109 @@ html, body {
         border: none;
         background-color: #000;
         cursor: pointer;
-        border-radius: 10px; /* Rounded corners */
+        border-radius: 10px;
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
         box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
         transition: all 0.3s ease;
     }
+
     .button-container button:hover {
         box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88, 0 0 75px #00ff88;
         transform: scale(1.1); /* Slightly enlarge the button on hover */
     }
- 
+
+    /* Video container for small screens */
+    .video-container {
+        position: relative;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        z-index: 10;
+        margin-top: -700px;
+        margin-left: 30px;
+    }
+
+    .video-container iframe {
+        width: 90%;
+        height: 200px;
+        border: none;
+        border-radius: 15px;
+    }
 }
 
-.logo {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 110px;
-            background-color: #0a0909;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
 
-        .logob {
-            width: 70px;
-            height: auto;
-        }
+    .logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110px;
+        background-color: #0a0909;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
 
+    .logob {
+        width: 70px;
+        height: auto;
+    }
+</style>
 
-    </style>
-    <div class="logo">
-        <img src="assets/img/logos/Normal.png" alt="Logo" class="logob">
-    </div>
-    <!-- Background container -->
-    <div class="background-container" id="background-container">
-        <img src="assets/engmob.png" alt="Goods Way Promo" id="background-image">
-    </div>
-    <!-- Button container -->
-    <div class="button-container">
-        <button onclick="changeBackground('english')">English</button>
-        <button onclick="changeBackground('hindi')">हिन्दी</button>
-        <button onclick="changeBackground('tamil')">தமிழ்</button>
-        <button onclick="changeBackground('telugu')">తెలుగు</button>
-        <button onclick="changeBackground('kannada')"> ಕನ್ನಡ</button>
+<div class="logo">
+    <img src="assets/img/logos/Normal.png" alt="Logo" class="logob">
+</div>
 
+<!-- Background container -->
+<div class="background-container" id="background-container">
+    <img src="assets/engmob.png" alt="Goods Way Promo" id="background-image">
+</div>
 
-<!-- JavaScript -->
+<!-- Button container -->
+<div class="button-container">
+    <button onclick="changeBackground('english')">English</button>
+    <button onclick="changeBackground('hindi')">हिन्दी</button>
+    <button onclick="changeBackground('tamil')">தமிழ்</button>
+    <button onclick="changeBackground('telugu')">తెలుగు</button>
+    <button onclick="changeBackground('kannada')"> ಕನ್ನಡ</button>
+</div>
 
+<!-- Video container -->
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/mqv9wWDbpL8?si=Yv_yj6oXlGH3Y-2g" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+    <iframe src="https://www.youtube.com/embed/cPfAjrjHHCE?si=E4cxEZ-n6AjY6yxt" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+    <iframe src="https://www.youtube.com/embed/x8orpl9jLFc?si=grb6_CJ8LiuhYpA6" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+</div>
 
 <script>
     function changeBackground(language) {
         const container = document.getElementById('background-container');
         const imgElement = document.getElementById('background-image');
-        // Determine if it's a large or small screen
         const isLargeScreen = window.innerWidth >= 1024;
-        // Change background image based on the selected language
         let imagePath = '';
+        
         if (language === 'english') {
             imagePath = isLargeScreen ? 'assets/engcomp.png' : 'assets/engmob.png';
         } else if (language === 'hindi') {
@@ -186,20 +258,10 @@ html, body {
         } else if (language === 'kannada') {
             imagePath = isLargeScreen ? 'assets/kannadacomp.png' : 'assets/kannadamob.png';
         }
-        // For mobile: change the background image of the container without changing the <img> tag
-        if (!isLargeScreen) {
-            container.style.backgroundImage = `url(${imagePath})`;
-            container.style.backgroundSize = 'contain'; // Ensure background image is contained and doesn't stretch
-            container.style.backgroundPosition = 'center'; // Center the background image
-            container.style.backgroundRepeat = 'no-repeat'; // Prevent repeating background
-            imgElement.style.display = 'none';  // Hide the <img> element
-            container.style.objectFit = 'auto';
-        } else {
-            // For large screens: just change the background image and display the <img> element
-            container.style.backgroundImage = `url(${imagePath})`;
-            imgElement.style.display = 'none';  // Hide the <img> element on large screens
-        }
+
+        imgElement.src = imagePath;
     }
 </script>
+
 </body>
 </html>
